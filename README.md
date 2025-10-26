@@ -4,7 +4,7 @@ ai_symptom_analyzer
 ﻿# HTF25-Team-364
 
 ## Live Demo
-🌐 Check out the deployed website: [https://your-deployed-link.com](https://your-deployed-link.com)
+🌐 Check out the deployed website: https://htf25-team-364.onrender.com
 
 ## GitHub submission guide
 
