@@ -69,7 +69,7 @@ export default function About() {
         </p>
         <div className="flex justify-center">
           <div className="inline-block px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold rounded-full">
-            Empowering Health Decisions Since 2024
+            Empowering Health Decisions Since 2025
           </div>
         </div>
       </div>

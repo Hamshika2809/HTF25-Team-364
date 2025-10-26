@@ -28,13 +28,13 @@ export default function Contact() {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) MEDI-SCAN',
+      value: '+91 9343829202',
       color: 'from-green-400 to-emerald-500',
     },
     {
       icon: MapPin,
       title: 'Address',
-      value: '123 Health Street, Medical District',
+      value: 'Health Street, Medical District',
       color: 'from-purple-400 to-pink-500',
     },
   ];
