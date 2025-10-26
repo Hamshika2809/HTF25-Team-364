@@ -1,4 +1,4 @@
-import { getMappedCondition } from "../utils/symptomMapping";
+
 
 
 import { useState } from 'react';
@@ -12,21 +12,14 @@ interface SymptomInputProps {
 export default function SymptomInput({ onSubmit, loading }: SymptomInputProps) {
   const [symptoms, setSymptoms] = useState('');
 
-  // const handleSubmit = (e: React.FormEvent) => {
-  //   e.preventDefault();
-  //   if (symptoms.trim()) {
-  //     onSubmit(symptoms);
-  //   }
-  // };
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (symptoms.trim()) {
+      onSubmit(symptoms);
+    }
+  };
 
 
-const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
-  if (symptoms.trim()) {
-    const condition = getMappedCondition(symptoms); // get mapped condition
-    onSubmit(condition); // send it to your ResultsPanel
-  }
-};
 
 
   return (
