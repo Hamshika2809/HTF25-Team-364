@@ -1,3 +1,6 @@
+import { getMappedCondition } from "../utils/symptomMapping";
+
+
 import { useState } from 'react';
 import { Search, Loader2 } from 'lucide-react';
 
@@ -9,12 +12,22 @@ interface SymptomInputProps {
 export default function SymptomInput({ onSubmit, loading }: SymptomInputProps) {
   const [symptoms, setSymptoms] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (symptoms.trim()) {
-      onSubmit(symptoms);
-    }
-  };
+  // const handleSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   if (symptoms.trim()) {
+  //     onSubmit(symptoms);
+  //   }
+  // };
+
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  if (symptoms.trim()) {
+    const condition = getMappedCondition(symptoms); // get mapped condition
+    onSubmit(condition); // send it to your ResultsPanel
+  }
+};
+
 
   return (
     <div className="w-full max-w-4xl mx-auto">
